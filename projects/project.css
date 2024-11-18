@@ -1,0 +1,236 @@
+:root {
+	--dark-gradient: radial-gradient(
+		100% 237.07% at 100% 100%,
+		#1e00c9 0%,
+		#34323e 100%
+	);
+	--white: rgba(255, 255, 255, 1);
+	--light-gradient: radial-gradient(
+		100% 237.07% at 100% 100%,
+		#1e00c9 0%,
+		#d0c8ff 100%
+	);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--dark-gradient);
+	font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	z-index: 100;
+}
+
+.navbar-content {
+	max-width: 1300px;
+	width: calc(100dvw - 100pt);
+	margin: 3.13rem auto 0 auto;
+
+	height: 3.125rem;
+	flex-shrink: 0;
+	border-radius: 0.625rem;
+	border: 1px solid rgba(212, 212, 212, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.03);
+	backdrop-filter: blur(10px);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3.13rem 0 3.13rem;
+}
+
+.navbar-logo {
+	height: 1.875rem;
+}
+
+.navbar-links {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	align-items: center;
+}
+
+.navbar-link > a {
+	text-decoration: none;
+	color: #fff;
+	text-align: right;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.navbar-link.highlight {
+	padding: 0.31rem 0;
+	height: 1.875rem;
+	flex-shrink: 0;
+	border-radius: 0.3125rem;
+	border: 1px solid rgba(212, 212, 212, 0.5);
+	background: rgb(255, 255, 255, 0.1);
+}
+
+.navbar-link.highlight > a {
+	margin: 0 1.19rem;
+}
+
+.navbar-link:not(:last-child) {
+	margin-right: 2.5rem;
+}
+
+.project-header-image-holder {
+	position: relative;
+	height: 34.8125rem;
+}
+
+.project-header-image {
+	width: calc(100dvw - 100pt);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.project-header-image:not(.blur) {
+	z-index: 10;
+}
+
+.project-header-image.blur {
+	filter: blur(40pt);
+}
+
+.project-header-text-line {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	margin-bottom: 2.5rem;
+}
+
+.project-header-text-title {
+	color: #fff;
+	font-family: Inter;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	text-transform: uppercase;
+
+	margin-right: 2.5rem;
+}
+
+.project-header-text-info {
+	color: #fff;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.project-header-text-paragraph {
+	color: #fff;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+
+	margin-bottom: 2.5rem;
+}
+
+.project-content {
+	padding: 10rem 50pt 0 50pt;
+}
+
+.project-segment {
+	border-radius: 0.625rem;
+	border: 1px solid rgba(212, 212, 212, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 20px 40px 40px 0px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(10px);
+
+	padding: 2.5rem 3.13rem;
+	width: calc(100dvw - 100pt);
+}
+
+.project-segment:not(:last-child) {
+	margin-bottom: 2.5rem;
+}
+
+.project-segment-title {
+	color: #fff;
+	font-family: Inter;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	text-transform: uppercase;
+
+	margin-bottom: 2.5rem;
+}
+
+.project-segment-grid {
+	width: calc(100dvw - 100pt - 6.26rem);
+	display: grid;
+	grid-template-columns: calc((100dvw - 100pt - 6.26rem) / 2 - 1.25rem) calc(
+			(100dvw - 100pt - 6.26rem) / 2 - 1.25rem
+		);
+	column-gap: 2.5rem;
+	row-gap: 2.5rem;
+}
+
+.project-segment-grid-image {
+	width: 100%;
+}
+
+.project-segment-grid-paragraph {
+	color: #fff;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.footer {
+	width: 100%;
+	background: #1e00c9;
+	height: 50pt;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50pt;
+	margin-top: 11.25rem;
+}
+
+.footer-text {
+	color: #fff;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	text-transform: uppercase;
+}
